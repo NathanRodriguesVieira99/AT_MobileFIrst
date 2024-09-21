@@ -1,0 +1,66 @@
+.burger-menu {
+  position: relative;
+  margin: 1rem;
+}
+.burger-menu .menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+}
+.burger-menu .menu-icon .line {
+  height: 3px;
+  width: 100%;
+  background-color: #000;
+  transition: all 0.3s ease;
+}
+@media (min-width: 768px) {
+  .burger-menu .menu-icon .line {
+    height: 4px;
+  }
+}
+.burger-menu .menu-icon.open .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.burger-menu .menu-icon.open .line:nth-child(2) {
+  opacity: 0;
+}
+.burger-menu .menu-icon.open .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+.burger-menu .menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: #fff;
+}
+.burger-menu .menu.visible {
+  display: block;
+}
+.burger-menu .menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.burger-menu .menu ul li {
+  padding: 10px 20px;
+}
+.burger-menu .menu ul li a {
+  text-decoration: none;
+  color: #000;
+}
+.burger-menu .lista-container {
+  display: none;
+}
+@media (min-width: 992px) {
+  .burger-menu .lista-container {
+    display: block;
+  }
+}
+@media (min-width: 992px) {
+  .burger-menu .menu-icon {
+    display: none;
+  }
+}/*# sourceMappingURL=BurgerMenu.css.map */

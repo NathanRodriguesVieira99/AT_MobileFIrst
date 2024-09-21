@@ -1,0 +1,13 @@
+@use "./variables/variables.scss";
+@use "./mixins//mixins.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: variables.$Font;
+  @include mixins.list_text_none;
+}
+
+
+

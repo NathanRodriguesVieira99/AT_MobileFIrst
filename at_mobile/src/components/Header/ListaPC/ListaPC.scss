@@ -1,0 +1,18 @@
+.listaPC {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+
+  a {
+    color: #000;
+    font-size: 35px;
+    transition: all ease 0.2s;
+    display: inline-block; 
+
+    &:hover {
+      color: red;
+      transform: scale(1.1);
+    }
+  }
+}

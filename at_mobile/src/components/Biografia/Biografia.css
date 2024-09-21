@@ -1,0 +1,22 @@
+.Odin {
+  margin-top: 3rem;
+}
+
+.biografia {
+  text-align: center;
+  margin: 0.5rem;
+}
+
+h1,
+p {
+  margin: 10px;
+}
+
+.tituloBio {
+  font-size: 33px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 21px;
+}/*# sourceMappingURL=Biografia.css.map */

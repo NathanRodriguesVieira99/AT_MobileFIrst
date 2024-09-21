@@ -1,0 +1,19 @@
+.maxImg {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 50%;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .maxImg {
+    width: 100%;
+    max-width: 365px;
+    margin-top: 1rem;
+  }
+}
+@media (min-width: 992px) {
+  .maxImg {
+    width: 100%;
+    max-width: 550px;
+  }
+}/*# sourceMappingURL=MaxImg.css.map */
