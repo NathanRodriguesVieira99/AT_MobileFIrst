@@ -1,113 +1,41 @@
 import React, { useState, useEffect } from "react";
-
 import "./Slider.scss";
 
-function CustomCarousel({ children }) {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [slideDone, setSlideDone] = useState(true);
-  const [timeID, setTimeID] = useState(null);
-
+function Slider({ images }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const slideInterval = 4000; 
   useEffect(() => {
-    if (slideDone) {
-      setSlideDone(false);
-      setTimeID(
-        setTimeout(() => {
-          slideNext();
-          setSlideDone(true);
-        }, 5000)
-      );
-    }
-  }, [slideDone]);
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, slideInterval);
 
-  const slideNext = () => {
-    setActiveIndex((val) => {
-      if (val >= children.length - 1) {
-        return 0;
-      } else {
-        return val + 1;
-      }
-    });
+    return () => clearInterval(timer); 
+  }, [images.length]);
+
+  const goToNextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
-  const slidePrev = () => {
-    setActiveIndex((val) => {
-      if (val <= 0) {
-        return children.length - 1;
-      } else {
-        return val - 1;
-      }
-    });
-  };
-
-  const AutoPlayStop = () => {
-    if (timeID > 0) {
-      clearTimeout(timeID);
-      setSlideDone(false);
-    }
-  };
-
-  const AutoPlayStart = () => {
-    if (!slideDone) {
-      setSlideDone(true);
-    }
+  const goToPrevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
 
   return (
-    <div
-      className="container__slider"
-      onMouseEnter={AutoPlayStop}
-      onMouseLeave={AutoPlayStart}
-    >
-      {children.map((item, index) => {
-        return (
-          <div
-            className={"slider__item slider__item-active-" + (activeIndex + 1)}
-            key={index}
-          >
-            {item}
+    <div className="slider">
+      <div
+        className="slider__wrapper"
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+      >
+        {images.map((image, index) => (
+          <div className="slider__slide" key={index}>
+            <img src={image.imgURL} alt={image.imgAlt} className="slider__image" />
           </div>
-        );
-      })}
-
-      <div className="container__slider__links">
-        {children.map((item, index) => {
-          return (
-            <button
-              key={index}
-              className={
-                activeIndex === index
-                  ? "container__slider__links-small container__slider__links-small-active"
-                  : "container__slider__links-small"
-              }
-              onClick={(e) => {
-                e.preventDefault();
-                setActiveIndex(index);
-              }}
-            ></button>
-          );
-        })}
+        ))}
       </div>
 
-      <button
-        className="slider__btn-next"
-        onClick={(e) => {
-          e.preventDefault();
-          slideNext();
-        }}
-      >
-        {">"}
-      </button>
-      <button
-        className="slider__btn-prev"
-        onClick={(e) => {
-          e.preventDefault();
-          slidePrev();
-        }}
-      >
-        {"<"}
-      </button>
+     
     </div>
   );
 }
 
-export default CustomCarousel;
+export default Slider;

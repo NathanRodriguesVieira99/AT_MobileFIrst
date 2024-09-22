@@ -1,7 +1,8 @@
 import img1 from '../SliderImg/img1.jpg';
 import img2 from '../SliderImg/img2.jpg';
-import img3 from '../SliderImg/img3.webp';
+import img3 from '../SliderImg/img3.jpg';
 import img4 from '../SliderImg/img4.jpg';
+import img5 from '../SliderImg/img5.jpg';
 
 const images = [
   {
@@ -19,6 +20,10 @@ const images = [
   {
     imgURL: img4,
     imgAlt: "img-4"
+  },
+  {
+    imgURL: img5,
+    imgAlt: "img-5"
   }
 ];
 

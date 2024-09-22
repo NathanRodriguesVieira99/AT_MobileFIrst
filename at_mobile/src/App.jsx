@@ -4,9 +4,11 @@ import './styles/global.scss'
 
 import Header from "./components/Header/Header";
 import Biografia from './components/Biografia/Biografia';
-import Propostas from './components/Propostas/Propostas';
+
 import Agenda from './components/Agenda/Agenda';
 import Footer from './components/Footer/Footer';
+import Propostas from "./components/Propostas/Propostas";
+import Contato from './components/Contato/Contato'
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
       <Biografia />
       <Propostas />
       <Agenda />
+      <Contato />
       <Footer />
     </>
   );

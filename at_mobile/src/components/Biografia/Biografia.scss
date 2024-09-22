@@ -1,12 +1,58 @@
-@use "../../styles/variables/variables.scss";
+@use "../../styles/variables/variables.scss" as *;
+@use "../../styles/mixins/mixins.scss" as mixins;
 
 .Odin {
-  margin-top: 3rem;
+  margin-top: .1rem;
+}
+
+.maxImg {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 50%;
+  height: auto;
+
+  @include mixins.respond-to("medium") {
+    max-width: 365px;
+    margin-top: 1rem;
+  }
+
+  @include mixins.respond-to("large") {
+    max-width: 550px;
+  }
 }
 
 .biografia {
-  text-align: center;
   margin: 0.5rem;
+
+  .paiMax {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    //responsivo
+    @include mixins.respond-to("medium") {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @include mixins.respond-to("large") {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  //responsivo
+
+  @include mixins.respond-to("medium") {
+    padding: 2rem;
+  }
+
+  @include mixins.respond-to("large") {
+    padding: 2.5rem;
+  }
 }
 
 h1,
@@ -16,9 +62,31 @@ p {
 
 .tituloBio {
   font-size: 33px;
+
+  //responsivo
+  @include mixins.respond-to("medium") {
+    font-size: 38px;
+  }
+
+  @include mixins.respond-to("large") {
+    font-size: 44px;
+  }
 }
 
 p {
   font-weight: 400;
   font-size: 21px;
+  //responsivo
+  @include mixins.respond-to("medium") {
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  @include mixins.respond-to("large") {
+    font-size: 34px;
+  }
+}
+
+h1 {
+  text-align: center;
 }

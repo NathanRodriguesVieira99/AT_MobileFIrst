@@ -15,7 +15,7 @@ const BurgerMenu = () => {
 
   return (
     <div className="burger-menu">
-      
+
       <div className={`menu-icon ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
         <div className="line" />
         <div className="line" />
@@ -31,6 +31,7 @@ const BurgerMenu = () => {
           <li><a href="#propostas" onClick={closeMenu}>Propostas</a></li>
 
           <li><a href="#agenda" onClick={closeMenu}>Agenda</a></li>
+          <li><a href="#contato" onClick={closeMenu}>Contato</a></li>
         </ul>
       </nav>
       {isOpen && <div className="overlay" onClick={toggleMenu} />}

@@ -8,6 +8,7 @@ const ListaPC = ({ closeMenu }) => {
       <li><a href="#biografia" onClick={closeMenu}>Biografia</a></li>
       <li><a href="#propostas" onClick={closeMenu}>Propostas</a></li>
       <li><a href="#agenda" onClick={closeMenu}>Agenda</a></li>
+      <li><a href="#contato" onClick={closeMenu}>Contato</a></li>
     </ul>
   );
 };
