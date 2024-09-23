@@ -1,0 +1,41 @@
+@use "../../styles/variables/variables.scss" as *;
+@use "../../styles/mixins/mixins.scss" as mixins;
+
+
+
+.btnBack {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+
+  
+  @include mixins.respond-to("medium") {
+   font-size: 29px;
+  }
+
+  @include mixins.respond-to("large") {
+    font-size: 33px;
+  }
+
+
+  @include mixins.respond-to("large") {
+    &:hover{
+      transform: scale(1.1);
+    
+      }
+  }
+
+
+
+
+}

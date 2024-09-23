@@ -1,0 +1,89 @@
+@use "../../styles/variables/variables.scss" as *;
+@use "../../styles/mixins/mixins.scss" as mixins;
+
+.contatos {
+  margin-top: 0.8rem;
+  background-color: #808080;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  @include mixins.respond-to("large") {
+    justify-content: space-evenly;
+  }
+}
+
+.wpp {
+  color: #49eb66;
+  font-size: 30px;
+
+  @include mixins.respond-to("medium") {
+    font-size: 44px;
+  }
+
+  @include mixins.respond-to("large") {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.ig {
+  color: #ff0da6;
+  font-size: 30px;
+
+  @include mixins.respond-to("medium") {
+    font-size: 44px;
+  }
+
+  @include mixins.respond-to("large") {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.email {
+  color: #fff;
+  font-size: 30px;
+
+  @include mixins.respond-to("medium") {
+    font-size: 44px;
+  }
+
+  @include mixins.respond-to("large") {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.ttk {
+  color: #000;
+  font-size: 30px;
+
+  @include mixins.respond-to("medium") {
+    font-size: 44px;
+  }
+
+  @include mixins.respond-to("large") {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.ttk {
+  color: #000;
+  font-size: 30px;
+  @include mixins.respond-to("medium") {
+    font-size: 44px;
+  }
+
+  @include mixins.respond-to("large") {
+  }
+}

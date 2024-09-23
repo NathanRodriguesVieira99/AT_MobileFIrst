@@ -1,0 +1,39 @@
+@use "../../styles/variables/variables.scss" as *;
+@use "../../styles/mixins/mixins.scss" as mixins;
+
+.agenda {
+  margin-top: 3rem;
+}
+
+ul {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+li {
+  font-size: 23px;
+  padding: 1rem;
+  @include mixins.respond-to("medium") {
+    font-size: 29px;
+    padding: 1rem;
+  }
+
+  @include mixins.respond-to("large") {
+    font-size: 30px;
+    padding: 0.9rem;
+  }
+}
+
+span {
+  font-size: 25px;
+  color: red;
+  @include mixins.respond-to("medium") {
+    font-size: 28px;
+  }
+
+  @include mixins.respond-to("large") {
+    font-size: 30px;
+  }
+}

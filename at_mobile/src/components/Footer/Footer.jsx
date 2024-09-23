@@ -1,8 +1,11 @@
 import React from 'react'
+import Contato from '../Contato/Contato'
 
 function Footer() {
   return (
-    <div>Footer</div>
+    <div className='footer'>
+      <Contato />
+    </div>
   )
 }
 

@@ -8,7 +8,7 @@ function Biografia() {
   return (
     <section className='Odin'>
       <div id='biografia' className='biografia'>
-        <h1 className='tituloBio'>Max Cavalera, Candidato a Prefeito do Rio de Janeiro</h1>
+        <h1 className='tituloBio' style={{ color: 'red' }} >Max Cavalera, Candidato a Prefeito do Rio de Janeiro</h1>
         <div className="paiMax">
           <img className='maxImg' src={Charlie} alt="Candidato Charlie Cavalo" />
           <p>

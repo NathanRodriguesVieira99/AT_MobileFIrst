@@ -1,4 +1,16 @@
+@use "../../styles/variables/variables.scss" as *;
+@use "../../styles/mixins/mixins.scss" as mixins;
+
 .propostas {
+  display: flex;
+  flex-flow: column wrap;
   margin-top: 0.8rem;
-  
+  margin-left: 0.3rem;
+  padding: 5px;
+  gap: 0.9rem;
+  text-align: center;
+}
+
+.titleProposta {
+  font-size: 2rem;
 }

@@ -8,16 +8,16 @@ import Biografia from './components/Biografia/Biografia';
 import Agenda from './components/Agenda/Agenda';
 import Footer from './components/Footer/Footer';
 import Propostas from "./components/Propostas/Propostas";
-import Contato from './components/Contato/Contato'
+import BotaoVoltar from "./components/BotaoVoltar/BotaoVoltar";
 
 function App() {
   return (
     <>
       <Header />
+      <BotaoVoltar />
       <Biografia />
       <Propostas />
       <Agenda />
-      <Contato />
       <Footer />
     </>
   );

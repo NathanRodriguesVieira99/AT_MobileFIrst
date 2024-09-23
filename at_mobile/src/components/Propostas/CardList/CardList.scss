@@ -1,9 +1,13 @@
+@use "../../../styles/variables//variables.scss" as *;
+@use "../../../styles/mixins/mixins.scss" as mixins;
+
 .card-list {
   margin-top: 5rem;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+ 
 
   .card {
     border: 1px solid #ddd;
@@ -11,6 +15,25 @@
     overflow: hidden;
     width: 300px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+
+    @include mixins.respond-to("medium") {
+      p {
+        font-size: 25px;
+      }
+    }
+
+    @include mixins.respond-to("large") {
+      p {
+        font-size: 26px;
+      }
+    }
+
+    @include mixins.respond-to("large") {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 
   .card-image {
