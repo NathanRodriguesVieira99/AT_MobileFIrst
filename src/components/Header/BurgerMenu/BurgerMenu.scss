@@ -15,9 +15,8 @@
     .line {
       height: 3px;
       width: 100%;
-      background-color: #000;
+      background-color: #fff; 
       transition: all 0.3s ease;
-
 
       @include mixins.respond-to("medium") {
         height: 4px; 
@@ -77,6 +76,23 @@
   @include mixins.respond-to("large") {
     .menu-icon {
       display: none;
+    }
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .line {
+    background-color: #fff; 
+  }
+
+  .menu {
+    background-color: #000; 
+
+    li {
+      a {
+        color: #fff; 
+      }
     }
   }
 }
