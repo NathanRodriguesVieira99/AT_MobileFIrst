@@ -87,3 +87,13 @@ ul {
   @include mixins.respond-to("large") {
   }
 }
+
+@media (prefers-color-scheme: dark) {
+
+  .contatos {
+    background-color: #000;
+  }
+  .ttk{
+    color: lightgray
+  }
+}
