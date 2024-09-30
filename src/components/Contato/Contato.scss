@@ -2,7 +2,8 @@
 @use "../../styles/mixins/mixins.scss" as mixins;
 
 .contatos {
-  margin-top: 0.8rem;
+  margin-top: 0.9rem;
+  height: 130px;
   background-color: #808080;
 }
 
@@ -48,7 +49,7 @@ ul {
 }
 
 .email {
-  color: #fff;
+  color: red;
   font-size: 30px;
 
   @include mixins.respond-to("medium") {
