@@ -36,6 +36,9 @@ function Contato() {
             </li>
           </a>
         </ul>
+        <p style={{ textAlign: "center", marginTop: "2rem" }}>
+          AT تم إنشاؤها بواسطة Nathan Rodrigues باستخدام ReactJS
+        </p>
       </div>
     </>
   );
