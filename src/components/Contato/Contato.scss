@@ -3,7 +3,7 @@
 
 .contatos {
   margin-top: 0.8rem;
-  background-color: #808080;
+  background-color: #fff;
 }
 
 ul {
@@ -16,6 +16,7 @@ ul {
     justify-content: space-evenly;
   }
 }
+
 
 .wpp {
   color: #49eb66;
@@ -48,11 +49,14 @@ ul {
 }
 
 .email {
-  color: #fff;
+  color: red;
   font-size: 30px;
 
   @include mixins.respond-to("medium") {
     font-size: 44px;
+    
+      
+    
   }
 
   @include mixins.respond-to("large") {
