@@ -14,3 +14,10 @@
 .titleProposta {
   font-size: 2rem;
 }
+
+@media (prefers-color-scheme: dark) {
+.titleProposta{
+  color: red;
+}
+}
+
